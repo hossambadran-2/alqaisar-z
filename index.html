@@ -12,7 +12,7 @@ body{margin:0;font-family:Tajawal,Tahoma,sans-serif;color:var(--tx);background:r
 header{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:8px;padding:18px 16px 16px;border-bottom:1px solid var(--line);background:#5326d6dd;backdrop-filter:blur(8px);position:static;z-index:20}
 header h1{margin:0;font-size:44px;font-weight:900;background:linear-gradient(90deg,var(--gold),#ff9f43);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1.1}
 header small{color:#fff;font-size:22px;font-weight:700}
-.by{border:1px solid var(--line);border-radius:20px;padding:6px 14px;font-size:13px;color:#f3ecff;white-space:nowrap}
+.hrow{display:flex;gap:12px;width:100%;max-width:860px;justify-content:center;flex-wrap:wrap;margin-top:4px}.by{flex:1 1 300px;text-align:center;font-size:24px;font-weight:900;color:#fff;background:rgba(255,255,255,.18);border:2px solid rgba(255,255,255,.55);border-radius:18px;padding:10px 20px;text-shadow:0 2px 6px #0004}.ph{flex:1 1 240px;display:flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;font-size:26px;font-weight:900;color:#3a1590;background:linear-gradient(120deg,#ffd23f,#ffb627);border-radius:18px;padding:10px 20px;letter-spacing:1px}
 main{max-width:860px;margin:0 auto;padding:14px}
 .card{background:linear-gradient(180deg,var(--c2),var(--c1));border:1px solid var(--line);border-radius:22px;padding:16px;margin-bottom:14px}
 .prof{display:flex;align-items:center;gap:12px}
@@ -44,13 +44,13 @@ main{max-width:860px;margin:0 auto;padding:14px}
 .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
 @media(min-width:560px){.grid{grid-template-columns:repeat(3,1fr)}}
 @media(min-width:760px){.grid{grid-template-columns:repeat(4,1fr)}}
-.tile{--a:#5b6aa8;text-align:right;font:inherit;color:var(--tx);background:linear-gradient(180deg,var(--c2),var(--c1));border:1px solid var(--line);border-top:3px solid var(--a);border-radius:18px;padding:12px;cursor:pointer;transition:.15s;display:block;width:100%}
+.tile{--a:#5b6aa8;text-align:right;font:inherit;color:var(--tx);background:linear-gradient(160deg,var(--t1,var(--c2)),var(--t2,var(--c1)));border:1px solid var(--line);border-top:3px solid var(--a);border-radius:18px;padding:12px;cursor:pointer;transition:.15s;display:block;width:100%}
 .tile:hover{transform:translateY(-2px);border-color:var(--a)}
 .tile .h{display:flex;justify-content:space-between;align-items:center}
 .tile .n{font-size:13px;color:#f3ecff;font-weight:700}.tile .n b{display:block;font-size:26px;color:var(--tx);font-weight:900;line-height:1}
-.mr{--p:0;--a:#5b6aa8;width:54px;height:54px;border-radius:50%;background:conic-gradient(var(--a) calc(var(--p)*1%),#a897ff 0);position:relative;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900;flex:none}
-.mr::before{content:"";position:absolute;inset:5px;background:var(--c1);border-radius:50%}.mr span{position:relative}
-.tile .sg{display:flex;gap:3px;margin:10px 0 7px}.tile .sg i{flex:1;height:7px;border-radius:4px;background:#a897ff}.sg i.c{background:var(--ok)}.sg i.w{background:var(--bad)}
+.mr{--p:0;--a:#5b6aa8;width:54px;height:54px;border-radius:50%;background:conic-gradient(var(--a) calc(var(--p)*1%),rgba(255,255,255,.4) 0);position:relative;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900;flex:none}
+.mr::before{content:"";position:absolute;inset:5px;background:var(--t2,var(--c1));border-radius:50%}.mr span{position:relative}
+.tile .sg{display:flex;gap:3px;margin:10px 0 7px}.tile .sg i{flex:1;height:7px;border-radius:4px;background:rgba(255,255,255,.4)}.sg i.c{background:var(--ok)}.sg i.w{background:var(--bad)}
 .tile .f{display:flex;justify-content:space-between;font-size:12px;color:#f3ecff}.tile .f b{color:var(--a)}
 .tile.s-new{--a:#5b6aa8}.tile.s-prog{--a:var(--am)}.tile.s-top{--a:var(--ok)}.tile.s-good{--a:var(--cy)}.tile.s-low{--a:var(--bad)}
 .tile .mr{--a:inherit}
@@ -112,7 +112,7 @@ dialog input{width:100%;font:inherit;font-size:18px;padding:12px;border:1px soli
 <p style="font-size:22px;line-height:2;font-weight:700">أهلاً وسهلاً بكم أطباء المستقبل في رحلتنا نحو التميز في القدرات والـ <b>100%</b> بمشيئة الله تعالى.</p>
 <button class="btn pri" id="spgo">ابدأ التدريب</button></div></div>
 <div id="home">
-<header><div><h1>زبدة القيصر</h1><small>في القدرات</small></div><div class="by">إعداد المدرب حسام بدران</div></header>
+<header><h1>زبدة القيصر</h1><small>في القدرات</small><div class="hrow"><div class="by">إعداد المدرب حسام بدران</div><a class="ph" dir="ltr" href="tel:0566272635"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.7-5A8.5 8.5 0 1 1 21 11.5z"/></svg><span>0566272635</span></a></div></header>
 <main>
  <div class="card prof"><img id="av" alt=""><div class="t"><b id="hi">أهلاً بك</b><span>مع المدرب حسام بدران – القيصر</span></div><button class="btn" id="chg">تغيير الاسم</button></div>
  <div class="card">
@@ -137,7 +137,7 @@ dialog input{width:100%;font:inherit;font-size:18px;padding:12px;border:1px soli
  <div id="secs"><div class="filters" id="flt"></div>
  <div class="grid" id="grid"></div></div>
  <div style="text-align:center;margin-top:18px;display:flex;gap:10px;justify-content:center"><button class="btn" id="snd"></button><button class="btn" id="reset">مسح التقدم</button></div>
- <div class="foot">زبدة القيصر في القدرات – إعداد المدرب حسام بدران</div>
+ <div class="foot">زبدة القيصر في القدرات – إعداد المدرب حسام بدران · 0566272635</div>
 </main>
 </div>
 <div id="quiz">
@@ -200,13 +200,14 @@ function renderHome(){
  sts.forEach((st,k)=>{const s=k+1,cl=cls(st),pct=st.d/st.t*100,acc=st.d?Math.round(st.c/st.d*100):0;
   const ok=filt==='all'||(filt==='new'&&!st.d)||(filt==='prog'&&st.d&&!st.full)||(filt==='done'&&st.full)||(filt==='weak'&&st.d&&acc<70);if(!ok)return;
   const lst=secList(s);
-  const b=document.createElement('button');b.className='tile '+cl;
+  const b=document.createElement('button');b.className='tile '+cl;const P=SC[(s-1)%SC.length];b.style.setProperty('--t1',P[0]);b.style.setProperty('--t2',P[1]);
   b.innerHTML=`<div class="h"><div class="n">القسم<b>${ar(s)}</b></div><div class="mr" style="--p:${pct};--a:${COL[cl]}"><span>${ar(Math.round(pct))}٪</span></div></div>
   <div class="sg">${lst.map(i=>`<i class="${prog[i]===undefined?'':prog[i]===Q[i].a?'c':'w'}"></i>`).join('')}</div>
   <div class="f"><span>${st.d?`${ar(st.d)}/${ar(st.t)} مُجاب`:`${ar(st.t)} سؤالًا`}</span><b>${st.d?'دقة '+ar(acc)+'٪':'—'}</b></div>`;
   b.onclick=()=>location.hash='s'+s;g.appendChild(b)});
  if(!g.children.length)g.innerHTML='<div style="grid-column:1/-1;text-align:center;color:#c9d5ff;padding:30px">لا توجد أقسام في هذا التصنيف</div>';
 }
+const SC=[['#ff6b6b','#c2255c'],['#ff922b','#d9480f'],['#f59f00','#c2410c'],['#51cf66','#2b8a3e'],['#20c997','#0b7285'],['#22b8cf','#1864ab'],['#4dabf7','#3b5bdb'],['#845ef7','#5f3dc4'],['#cc5de8','#9c36b5'],['#f06595','#a61e4d'],['#82c91e','#5c940d'],['#ff8787','#c92a2a']];
 // ---- session
 let S=null,qi=0,cache={},urlC={},t0=0,tint=0,fin=false,sa={};
 async function pack(p){if(!cache[p]){const t=document.getElementById('pk'+String(p+1).padStart(2,'0')).textContent.trim();const bin=atob(t),n=bin.length,u=new Uint8Array(n);for(let i=0;i<n;i++)u[i]=bin.charCodeAt(i);cache[p]=u.buffer}return cache[p]}
